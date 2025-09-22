@@ -64,5 +64,11 @@ namespace AlgoritmosDeSeguridad.App
             string descifrado = AlgoritmosDeSeguridad.Algoritmos.Asimetrico.DesencriptarAsimetrico(txtAsimetricoCifrado.Text);
             txtAsimetricoDesencriptado.Text = descifrado;
         }
+
+        private void btnGenerarHash_Click(object sender, EventArgs e)
+        {
+            string hash = AlgoritmosDeSeguridad.Algoritmos.Hash.GenerarHashSHA256(txtMsgHASH.Text);
+            txtResultadoHASH.Text = hash;
+        }
     }
 }

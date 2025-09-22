@@ -434,6 +434,7 @@
             this.btnGenerarHash.TabIndex = 4;
             this.btnGenerarHash.Text = "Generar HASH";
             this.btnGenerarHash.UseVisualStyleBackColor = true;
+            this.btnGenerarHash.Click += new System.EventHandler(this.btnGenerarHash_Click);
             // 
             // txtResultadoHASH
             // 
