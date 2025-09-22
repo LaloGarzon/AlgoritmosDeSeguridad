@@ -310,6 +310,7 @@
             this.btnAsimetricoDesencriptar.TabIndex = 9;
             this.btnAsimetricoDesencriptar.Text = "Desencriptar";
             this.btnAsimetricoDesencriptar.UseVisualStyleBackColor = true;
+            this.btnAsimetricoDesencriptar.Click += new System.EventHandler(this.btnAsimetricoDesencriptar_Click);
             // 
             // txtAsimetricoDesencriptado
             // 
@@ -358,6 +359,7 @@
             this.btnAsimetricoEncriptar.TabIndex = 4;
             this.btnAsimetricoEncriptar.Text = "Encriptar";
             this.btnAsimetricoEncriptar.UseVisualStyleBackColor = true;
+            this.btnAsimetricoEncriptar.Click += new System.EventHandler(this.btnAsimetricoEncriptar_Click);
             // 
             // txtAsimetricoPlano01
             // 

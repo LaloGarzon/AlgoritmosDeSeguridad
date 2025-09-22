@@ -50,5 +50,19 @@ namespace AlgoritmosDeSeguridad.App
             string plano = AlgoritmosDeSeguridad.Algoritmos.Simetrico.DesencriptarSimetrico(txtCifradoSimetrico.Text, cbxAlgoritmoSimetrico.Text, clave, vectorIV);
             txtPlano02Simetrico.Text = plano;
         }
+
+        private void btnAsimetricoEncriptar_Click(object sender, EventArgs e)
+        {
+            string llavePublica;
+            string cifrado = AlgoritmosDeSeguridad.Algoritmos.Asimetrico.EncriptarAsimetrico(txtAsimetricoPlano01.Text, out llavePublica);
+            txtAsimetricoCifrado.Text = cifrado;
+            txtLlaveAsimetrico.Text= llavePublica;
+        }
+
+        private void btnAsimetricoDesencriptar_Click(object sender, EventArgs e)
+        {
+            string descifrado = AlgoritmosDeSeguridad.Algoritmos.Asimetrico.DesencriptarAsimetrico(txtAsimetricoCifrado.Text);
+            txtAsimetricoDesencriptado.Text = descifrado;
+        }
     }
 }
