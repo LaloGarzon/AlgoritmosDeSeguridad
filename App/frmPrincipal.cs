@@ -70,5 +70,10 @@ namespace AlgoritmosDeSeguridad.App
             string hash = AlgoritmosDeSeguridad.Algoritmos.Hash.GenerarHashSHA256(txtMsgHASH.Text);
             txtResultadoHASH.Text = hash;
         }
+
+        private void btnLongitudHash_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("El resultado de aplicar HASH al texto ingresado, genero una longitud de " + txtResultadoHASH.Text.Length + ".", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

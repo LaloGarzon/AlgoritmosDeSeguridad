@@ -59,7 +59,7 @@
             this.txtLlaveAsimetrico = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnLongitud = new System.Windows.Forms.Button();
+            this.btnLongitudHash = new System.Windows.Forms.Button();
             this.btnGenerarHash = new System.Windows.Forms.Button();
             this.txtResultadoHASH = new System.Windows.Forms.TextBox();
             this.txtMsgHASH = new System.Windows.Forms.TextBox();
@@ -400,7 +400,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.btnLongitud);
+            this.tabPage3.Controls.Add(this.btnLongitudHash);
             this.tabPage3.Controls.Add(this.btnGenerarHash);
             this.tabPage3.Controls.Add(this.txtResultadoHASH);
             this.tabPage3.Controls.Add(this.txtMsgHASH);
@@ -415,15 +415,16 @@
             this.tabPage3.Text = "HASH";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // btnLongitud
+            // btnLongitudHash
             // 
-            this.btnLongitud.Location = new System.Drawing.Point(680, 363);
-            this.btnLongitud.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLongitud.Name = "btnLongitud";
-            this.btnLongitud.Size = new System.Drawing.Size(36, 28);
-            this.btnLongitud.TabIndex = 5;
-            this.btnLongitud.Text = "lngtd";
-            this.btnLongitud.UseVisualStyleBackColor = true;
+            this.btnLongitudHash.Location = new System.Drawing.Point(680, 363);
+            this.btnLongitudHash.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLongitudHash.Name = "btnLongitudHash";
+            this.btnLongitudHash.Size = new System.Drawing.Size(36, 28);
+            this.btnLongitudHash.TabIndex = 5;
+            this.btnLongitudHash.Text = "lngtd";
+            this.btnLongitudHash.UseVisualStyleBackColor = true;
+            this.btnLongitudHash.Click += new System.EventHandler(this.btnLongitudHash_Click);
             // 
             // btnGenerarHash
             // 
@@ -529,7 +530,7 @@
         private System.Windows.Forms.TextBox txtLlaveAsimetrico;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button btnLongitud;
+        private System.Windows.Forms.Button btnLongitudHash;
         private System.Windows.Forms.Button btnGenerarHash;
         private System.Windows.Forms.TextBox txtResultadoHASH;
         private System.Windows.Forms.TextBox txtMsgHASH;
