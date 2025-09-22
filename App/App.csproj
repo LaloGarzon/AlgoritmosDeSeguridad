@@ -80,5 +80,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Algoritmos\Algoritmos.csproj">
+      <Project>{2cbf7314-1b38-4d46-8c4f-ff8c5848b901}</Project>
+      <Name>Algoritmos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

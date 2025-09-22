@@ -182,6 +182,7 @@
             this.btnEncriptarSimetrico.TabIndex = 10;
             this.btnEncriptarSimetrico.Text = "Encriptar";
             this.btnEncriptarSimetrico.UseVisualStyleBackColor = true;
+            this.btnEncriptarSimetrico.Click += new System.EventHandler(this.btnEncriptarSimetrico_Click);
             // 
             // btnDesencriptarSimetrico
             // 
@@ -192,6 +193,7 @@
             this.btnDesencriptarSimetrico.TabIndex = 9;
             this.btnDesencriptarSimetrico.Text = "Desencriptar";
             this.btnDesencriptarSimetrico.UseVisualStyleBackColor = true;
+            this.btnDesencriptarSimetrico.Click += new System.EventHandler(this.btnDesencriptarSimetrico_Click);
             // 
             // label4
             // 
@@ -479,6 +481,7 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Algoritmos de Seguridad";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

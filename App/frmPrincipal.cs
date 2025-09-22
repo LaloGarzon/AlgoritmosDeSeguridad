@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,39 @@ namespace AlgoritmosDeSeguridad.App
         public frmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            // Lista de Algoritmos Implemenatados
+            cbxAlgoritmoSimetrico.Items.Add("DES");
+            cbxAlgoritmoSimetrico.Items.Add("3DES");
+            cbxAlgoritmoSimetrico.Items.Add("AES");
+            cbxAlgoritmoSimetrico.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxAlgoritmoSimetrico.Text = cbxAlgoritmoSimetrico.Items[0].ToString();
+
+            // La llave y vector IV deben definirse por defecto, esto ayuda a evitar errores.
+            chkBxLlave.Checked = true;
+        }
+
+        private void btnEncriptarSimetrico_Click(object sender, EventArgs e)
+        {
+            string clave = string.Empty;
+            string vectorIV = string.Empty;
+            string cifrado = AlgoritmosDeSeguridad.Algoritmos.Simetrico.EncriptarSimetrico(txtPlano01Simetrico.Text, cbxAlgoritmoSimetrico.Text, out clave, out vectorIV);
+
+            txtCifradoSimetrico.Text = cifrado;
+            txtLlaveSimetrico.Text = clave;
+            txtIVSimetrico.Text = vectorIV;
+
+        }
+
+        private void btnDesencriptarSimetrico_Click(object sender, EventArgs e)
+        {
+            string clave = txtLlaveSimetrico.Text;
+            string vectorIV = txtIVSimetrico.Text;
+            string plano = AlgoritmosDeSeguridad.Algoritmos.Simetrico.DesencriptarSimetrico(txtCifradoSimetrico.Text, cbxAlgoritmoSimetrico.Text, clave, vectorIV);
+            txtPlano02Simetrico.Text = plano;
         }
     }
 }
